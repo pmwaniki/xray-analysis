@@ -7,4 +7,6 @@ ASHA algorith in ray[tune] library was to select optimal hyper-parameters for dr
 
 ## Incorporating individual reader annotation
 We extended the ResNet model by adding an embedding layer for reader identifiers. The model could therefore classify a given CXR conditional on reader identifier. Reader identifiers were embedded into a vector of 16 units. The embeddings were then projected to have the same dimensions as the image embeddings using a fully connected layer. Sigmoid activation was applied to the transformed embeddings. Image embeddings were derived by applying global average pooling to the last convolutional layer. Image embeddings and reader embeddings were combined by element-wise multiplication. A fully connected layer with softmax activation was then appended for prediction.
-![alt text]()
+
+
+![alt text](https://github.com/pmwaniki/xray-analysis/blob/master/perch_ensemble.png)
